@@ -1,0 +1,114 @@
+@use "sass:math";
+
+$popup-cross-button-size: 27px;
+$popup-cross-size: 15px;
+$popup-cross-thickness: 2px;
+
+.popup {
+  display: none;
+
+  &--opened {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-width: $desktop;
+    height: 100%;
+    min-height: 100vh;
+    padding: #{10px + $popup-cross-button-size};
+
+    cursor: pointer;
+    background-color: $color-background-dark;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    animation: fadeIn $animation-duration forwards;
+  }
+}
+
+.popup__content {
+  position: relative;
+
+  box-sizing: border-box;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  margin-left: $popup-cross-button-size;
+
+  cursor: default;
+  background-color: $color-prime-background;
+
+  animation: fall $animation-duration forwards;
+}
+
+.popup__close-button {
+  position: absolute;
+  right: #{-1 * $popup-cross-button-size};
+  top: #{-1 * $popup-cross-button-size};
+
+  display: block;
+  width: $popup-cross-button-size;
+  height: $popup-cross-button-size;
+  padding: 0;
+
+  background-color: $color-gray-2;
+  border: none;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+
+    display: block;
+    width: math.round(math.hypot($popup-cross-size, $popup-cross-size));
+    height: $popup-cross-thickness;
+    margin: 0 auto;
+
+    background-color: $color-white;
+    border-radius: $popup-cross-thickness;
+
+    transition: transform $animation-duration;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    margin-top: #{-1 * $popup-cross-thickness};
+
+    transform: rotate(-45deg);
+  }
+}
+
+.popup__close-button:hover,
+.popup__close-button:focus {
+  box-shadow: inset 0 0 0 2px $color-black-2;
+
+  &::before,
+  &::after {
+    background-color: $color-black-2;
+  }
+}
+
+.popup__close-button:hover {
+  &::before {
+    transform: rotate(225deg);
+  }
+
+  &::after {
+    transform: rotate(135deg);
+  }
+}
+
+.popup__close-button:active {
+  opacity: 0.2;
+}

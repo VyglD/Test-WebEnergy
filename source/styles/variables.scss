@@ -1,8 +1,15 @@
 $prime-offset: 10px;
 $desktop: 1000px;
 
-$color-text: #767676;
-$color-text-light: #FFFFFF;
-$color-prime-background: #FFFFFF;
+$animation-duration: 0.5s;
+
+$color-white: #FFFFFF;
+$color-red: #FF8383;
 $color-gray-1: #DCDCDC;
 $color-gray-2: #777777;
+$color-black: #000000;
+$color-black-2: #535353;
+$color-text: #767676;
+$color-text-light: $color-white;
+$color-prime-background: $color-white;
+$color-background-dark: rgba($color-black, 0.5);

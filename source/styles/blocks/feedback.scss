@@ -1,0 +1,128 @@
+$feedback-input-invalid-shadow: inset 0 0 14px 2px $color-red;
+$feedback-input-focus-shadow: 0 0 0 2px $color-black-2;
+
+.feedback {
+  box-sizing: border-box;
+  display: block;
+  width: 466px;
+  padding: 24px 61px 26px 64px;
+}
+
+.feedback__title {
+  margin: 8px 0 0;
+  padding-right: 10px;
+
+  color: $color-black-2;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback__form {
+  margin-top: 26px;
+}
+
+.feedback__label {
+  display: block;
+  margin-top: 13px;
+  padding-left: 6px;
+
+  color: $color-black-2;
+  text-align: center;
+
+  &--textarea {
+    margin-top: 18px;
+  }
+}
+
+.feedback__input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-top: 2px;
+  padding: 11px 12px;
+
+  border: 1px solid $color-gray-2;
+  outline: none;
+
+  &,
+  &::placeholder {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  &--textarea {
+    height: 142px;
+
+    resize: none;
+  }
+}
+
+.feedback__input:invalid {
+  border-color: $color-gray-2;
+  box-shadow: none;
+
+  &::placeholder {
+    color: $color-red;
+  }
+}
+
+.feedback__input:invalid:focus,
+.feedback__input:focus {
+  box-shadow: $feedback-input-focus-shadow;
+}
+
+.feedback__input--invalid,
+.feedback__input--invalid:invalid {
+  &,
+  &::placeholder {
+    color: $color-red;
+  }
+
+  border-color: $color-red;
+  box-shadow: $feedback-input-invalid-shadow;
+}
+
+.feedback__input--invalid:focus,
+.feedback__input--invalid:invalid:focus {
+  border-color: $color-red;
+  box-shadow:
+    $feedback-input-focus-shadow,
+    $feedback-input-invalid-shadow;
+}
+
+.feedback__submit {
+  display: flex;
+  margin: 20px auto 0;
+  padding: 12px 16px;
+
+  color: $color-text-light;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  background-color: $color-gray-2;
+  border: none;
+  outline: none;
+}
+
+.feedback__submit:hover,
+.feedback__submit:focus {
+  color: $color-black-2;
+
+  box-shadow:
+    inset 0 0 0 2px $color-black-2,
+    0 0 4px 1px $color-black-2;
+}
+
+.feedback__submit:hover {
+  opacity: 0.8;
+}
+
+.feedback__submit:active {
+  opacity: 0.3;
+}

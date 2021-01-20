@@ -1,5 +1,5 @@
 .prime-header {
-  width: 100%;
+  max-width: 100%;
 
   background-color: $color-gray-1;
 }
@@ -40,7 +40,19 @@
   letter-spacing: 0.022em;
   line-height: 46px;
   text-align: right;
+
+  outline: none;
 }
+
+.prime-header__phone:hover,
+.prime-header__phone:focus {
+  color: $color-white;
+}
+
+.prime-header__phone:active {
+  opacity: 0.3;
+}
+
 
 .prime-header__feedback-button {
   display: block;

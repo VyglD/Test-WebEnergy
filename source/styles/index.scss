@@ -1,8 +1,11 @@
+// External styles
+@import "../../node_modules/toastr/toastr.scss";
+
+// Own styles
 @import "variables.scss";
 @import "fonts.scss";
 @import "common.scss";
 @import "blocks/prime-header.scss";
 @import "blocks/menu.scss";
-
-// External styles
-@import "../../node_modules/toastr/toastr.scss";
+@import "blocks/popup.scss";
+@import "blocks/feedback.scss";

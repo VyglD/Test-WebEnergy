@@ -38,6 +38,8 @@
   letter-spacing: 0.02em;
   line-height: var(--link-font-size);
 
+  outline: none;
+
   &::before {
     content: "";
 
@@ -66,7 +68,8 @@
   background-color: transparent;
 }
 
-.menu__link[href]:hover {
+.menu__link[href]:hover,
+.menu__link[href]:focus {
   &::after {
     background-color: $color-text-light;
   }

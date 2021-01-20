@@ -26,5 +26,5 @@ nav(class="menu")
   ul(class="menu__links-list")
     each item in menu
       li(class="menu__link-wrapper")
-        a(class="menu__link" href=item.link).
+        a(class="menu__link" href=item.link data-blank-status=item.link).
           #{item.title}

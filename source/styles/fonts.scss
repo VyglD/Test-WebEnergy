@@ -18,6 +18,15 @@
 
 @font-face {
   font-family: "PT Sans";
+  src: url("../fonts/PTSans-Italic.woff"),
+    url("../fonts/PTSans-Italic.woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
   src: url("../fonts/PTSans-Bold.woff"),
     url("../fonts/PTSans-Bold.woff2");
   font-weight: 700;
