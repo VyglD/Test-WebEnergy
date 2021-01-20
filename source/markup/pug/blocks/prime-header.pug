@@ -1,3 +1,5 @@
+include ../mixins/menu.pug
+
 header(class="prime-header" data-scroll-offset)
   div(class="prime-header__content")
     picture(class="prime-heder__logo-wrapper")
@@ -16,4 +18,4 @@ header(class="prime-header" data-scroll-offset)
         +7(499) 777-77-77
       button(class="prime-header__feedback-button" type="button").
         Обратная связь
-  include menu.pug
+  +menu()

@@ -1,0 +1,65 @@
+.prime-footer {
+  max-width: 100%;
+  margin: auto 0 0;
+
+  background-color: $color-gray-2;
+}
+
+.prime-footer__content {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 44px $prime-offset 50px;
+}
+
+.prime-footer__copyright {
+  max-width: 210px;
+
+  color: $color-text-light;
+  letter-spacing: 0.03em;
+}
+
+.prime-footer__email {
+  outline: none;
+}
+
+.prime-footer__email:hover,
+.prime-footer__email:focus {
+  text-decoration: underline;
+}
+
+.prime-footer__email:hover {
+  opacity: 0.8;
+}
+
+.prime-footer__email:active {
+  opacity: 0.3;
+}
+
+.prime-footer__developers-wrapper {
+  display: flex;
+  max-width: 225px;
+
+  &::before {
+    content: "";
+
+    flex-shrink: 0;
+    display: block;
+    width: 36px;
+    height: 38px;
+    margin: 6px 10px 0 0;
+
+    background-image: url("../img/dev-logo.png");
+  }
+}
+
+.prime-footer__developers {
+  color: $color-text-light;
+  letter-spacing: 0.02em;
+}
+
+.prime-footer__developers-name {
+  border-bottom: 1px solid $color-white;
+}

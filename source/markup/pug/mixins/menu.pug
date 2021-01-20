@@ -1,0 +1,36 @@
+mixin menu(customClass)
+  -
+    const menuItems = [
+      {
+        title: `Главная`,
+        link: false,
+        blank: false,
+      },
+      {
+        title: `Каталог`,
+        link: `blank.html`,
+        blank: true,
+      },
+      {
+        title: `Доставка и оплата`,
+        link: `blank.html`,
+        blank: true,
+      },
+      {
+        title: `Прайс-лист`,
+        link: `blank.html`,
+        blank: true,
+      },
+      {
+        title: `Контакты`,
+        link: `blank.html`,
+        blank: true,
+      },
+    ];
+
+  nav(class=`menu ${customClass}`)
+    ul(class="menu__links-list")
+      each item in menuItems
+        li(class="menu__link-wrapper")
+          a(class="menu__link" href=item.link data-blank-status=item.blank).
+            #{item.title}

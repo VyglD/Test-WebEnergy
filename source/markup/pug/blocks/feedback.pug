@@ -1,0 +1,40 @@
+section(class="feedback")
+  h2(class="feedback__title").
+    Обратная связь
+  form(class="feedback__form" method="POST" action="blank.html")
+    label(class="feedback__label" for="feedback-name").
+      Ваше имя *
+    input(
+      class="feedback__input"
+      type="text"
+      name="name"
+      id="feedback-name"
+      required
+    )
+    label(class="feedback__label" for="feedback-phone").
+      Телефон *
+    input(
+      class="feedback__input"
+      type="tel"
+      name="phone"
+      id="feedback-phone"
+      required
+    )
+    label(class="feedback__label" for="feedback-email").
+      Email *
+    input(
+      class="feedback__input"
+      type="email"
+      name="email"
+      id="feedback-email"
+      required
+    )
+    label(class="feedback__label feedback__label--textarea" for="feedback-message").
+      Сообщение
+    textarea(
+      class="feedback__input feedback__input--textarea"
+      name="message"
+      id="feedback-message"
+    )
+    button(class="feedback__submit" type="submit").
+      Отправить

@@ -78,3 +78,44 @@
 .menu__link[href]:active {
   opacity: 0.3;
 }
+
+.menu--footer {
+  width: auto;
+  margin-right: 146px;
+
+  .menu__links-list {
+    display: block;
+    padding: 0;
+  }
+
+  .menu__link-wrapper:not(:first-child) {
+    margin-top: 4px;
+  }
+
+  .menu__link {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      width: 100%;
+      margin-left: 0;
+
+      background-color: $color-text-light;
+    }
+  }
+
+  .menu__link[href]:hover,
+  .menu__link[href]:focus {
+    &::after {
+      background-color: transparent;
+    }
+  }
+}
