@@ -1,0 +1,56 @@
+.blank {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+
+  &--popup {
+    max-width: 500px;
+    margin: 0;
+  }
+}
+
+.blank__title {
+  display: block;
+  margin-top: 20px;
+  padding: 0 20px;
+
+  color: $color-text;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.blank__description {
+  display: block;
+  margin: 20px 0;
+
+  text-align: center;
+
+  &--popup {
+    display: none;
+  }
+}
+
+.blank__link {
+  font-weight: 600;
+
+  outline: none;
+}
+
+.blank__link:hover,
+.blank__link:focus {
+  color: $color-red;
+  text-decoration: underline;
+}
+
+.blank__link:hover {
+  text-decoration: none;
+}
+
+.blank__link:active {
+  opacity: 0.2;
+}

@@ -1,0 +1,33 @@
+include ../mixins/prime-header.pug
+include ../mixins/prime-footer.pug
+
+-
+  const preloadsFonts = [
+    "OpenSans-Condensed-Light.woff2",
+    "PTSans-Bold.woff2",
+    "PTSans-Italic.woff2",
+    "PTSans-Regular.woff2"
+  ];
+
+//- В блоке variables необходимо присвоить наименование текущей страницы переменной
+//- currentPageTitle
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    meta(name="description" content="Лендинг самой клевой компании")
+    link(rel="stylesheet" href="css/style.min.css")
+    each value in preloadsFonts
+      link(rel="preload" href=`fonts/${value}` as="font" type="font/woff2" crossorigin="anonymous")
+    title.
+      Название комании
+  body
+    +prime-header(currentPageTitle)
+    main(data-scroll-offset)
+      block main-content
+    +prime-footer(currentPageTitle)
+    include ../blocks/popup-feedback.pug
+    script(src="js/app.min.js")

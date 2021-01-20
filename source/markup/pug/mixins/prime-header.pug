@@ -1,0 +1,22 @@
+include ../mixins/menu.pug
+
+mixin prime-header(currentPage)
+  header(class="prime-header" data-scroll-offset)
+    div(class="prime-header__content")
+      picture(class="prime-heder__logo-wrapper")
+        source(type="image/webp" srcset="img/logo.webp")
+        img(
+          class="prime-heder__logo"
+          src="img/logo.webp"
+          alt="Название комании"
+          width="273"
+          height="100"
+        )
+      div(class="prime-header__feedback-wrapper")
+        a(class="prime-header__phone" href="tel:+74997777777").
+          +7(499) 777-77-77
+        a(class="prime-header__phone" href="tel:+74997777777").
+          +7(499) 777-77-77
+        button(class="prime-header__feedback-button" type="button").
+          Обратная связь
+    +menu(currentPage)

@@ -1,0 +1,12 @@
+extends ../extends/layout.pug
+
+block variables
+  - const currentPageTitle = `Пустая`;
+
+block main-content
+  section(class="blank")
+    h2(class="blank__title").
+      Данная страница отсутствует
+    p(class="blank__description").
+      В рамках данного проекта запрошенная страница отсутствует.
+        Вы можете вернуться на #[a(class="blank__link" href="index.html") главную]

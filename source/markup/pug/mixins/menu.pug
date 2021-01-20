@@ -1,9 +1,10 @@
-mixin menu(customClass)
+mixin menu(currentPage = `Главная`, customClass = ``)
   -
+    const blankPage = `blank.html`;
     const menuItems = [
       {
         title: `Главная`,
-        link: false,
+        link: `index.html`,
         blank: false,
       },
       {
@@ -27,6 +28,13 @@ mixin menu(customClass)
         blank: true,
       },
     ];
+
+    menuItems.forEach((item) => {
+      if (item.title === currentPage) {
+        item.link = false;
+        item.blank = false;
+      }
+    })
 
   nav(class=`menu ${customClass}`)
     ul(class="menu__links-list")
