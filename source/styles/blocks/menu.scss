@@ -1,0 +1,77 @@
+.menu {
+  display: block;
+  width: 100%;
+
+  background-color: $color-gray-2;
+}
+
+.menu__links-list {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: $prime-offset $prime-offset 16px;
+}
+
+.menu__link-wrapper {
+  flex-shrink: 0;
+}
+
+.menu__link {
+  --link-font-size: 30px;
+  --link-offset-size: 20px;
+  --link-line-size: 2px;
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 11px 0;
+
+  color: $color-text-light;
+  font-weight: 400;
+  font-size: var(--link-font-size);
+  letter-spacing: 0.02em;
+  line-height: var(--link-font-size);
+
+  &::before {
+    content: "";
+
+    display: block;
+    height: calc(0.84 * var(--link-font-size));
+    width: var(--link-line-size);
+    margin-top: 5px;
+    margin-right: var(--link-offset-size);
+
+    background-color: $color-text-light;
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+    height: var(--link-line-size);
+    width: calc(100% - 2 * var(--link-offset-size));
+    margin-left: var(--link-offset-size);
+
+    background-color: transparent;
+  }
+}
+
+.menu__link-wrapper:first-child .menu__link::before {
+  background-color: transparent;
+}
+
+.menu__link[href]:hover {
+  &::after {
+    background-color: $color-text-light;
+  }
+}
+
+.menu__link[href]:active {
+  opacity: 0.3;
+}

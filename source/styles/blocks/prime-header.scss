@@ -1,0 +1,75 @@
+.prime-header {
+  width: 100%;
+
+  background-color: $color-gray-1;
+}
+
+.prime-header__content {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 36px $prime-offset;
+}
+
+.prime-heder__logo-wrapper {
+  width: 273px;
+  height: 100px;
+  margin: 29px 0;
+
+  overflow: hidden;
+}
+
+.prime-heder__logo {
+  display: block;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+.prime-header__phone {
+  display: block;
+
+  color: $color-text;
+  font-family: "Open Sans Condensed", "Tahoma", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  letter-spacing: 0.022em;
+  line-height: 46px;
+  text-align: right;
+}
+
+.prime-header__feedback-button {
+  display: block;
+  margin-top: 5px;
+  margin-left: auto;
+  padding: 0;
+
+  color: $color-text;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  line-height: 24px;
+  text-align: right;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px dashed $color-text;
+  outline: none;
+}
+
+.prime-header__feedback-button:hover,
+.prime-header__feedback-button:focus {
+  border-bottom-color: transparent;
+}
+
+.prime-header__feedback-button:hover {
+  opacity: 0.8;
+}
+
+.prime-header__feedback-button:active {
+  opacity: 0.3;
+}
