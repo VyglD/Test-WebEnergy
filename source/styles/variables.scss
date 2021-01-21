@@ -3,6 +3,9 @@ $desktop: 1000px;
 
 $animation-duration: 0.5s;
 
+$grid-left-column-width: 200px;
+$grid-rigth-column-width: #{$desktop - 2 * $prime-offset - $grid-left-column-width};
+
 $color-white: #FFFFFF;
 $color-white-2: #F9F9F9;
 $color-red: #FF8383;
@@ -11,6 +14,8 @@ $color-gray-2: #777777;
 $color-gray-3: #D2D2D2;
 $color-black: #000000;
 $color-black-2: #535353;
+$color-black-3: #010101;
+$color-black-4: #444444;
 $color-text: #767676;
 $color-text-light: $color-white;
 $color-prime-background: $color-white;

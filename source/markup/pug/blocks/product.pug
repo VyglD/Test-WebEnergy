@@ -1,0 +1,21 @@
+article(class="product")
+  picture(class="product__img-wrapper")
+    source(type="image/webp" srcset="img/no-photo.webp")
+    img(
+      class="product-img"
+      src="img/no-photo.jpg"
+      alt="Изображение товара"
+      width="210"
+      height="209"
+    )
+  h3(class="product__title").
+    Самый клевый чайник, который надо купить!
+  div(class="product__purchase--wrapper")
+    p(class="product__price").
+      1 900 р.
+    button(
+      class="product__basket"
+      type="button"
+      aria-label="Добавить товар в конзину"
+      data-blank-status
+    )

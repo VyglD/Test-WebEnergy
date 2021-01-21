@@ -1,0 +1,187 @@
+-
+  const categories = [
+    {
+      title: `Автомобили`,
+      chapters: [
+        {
+          name: `Легковые`,
+          checked: false,
+        },
+        {
+          name: `Грузовые`,
+          checked: false,
+        }
+      ],
+      active: false,
+    },
+    {
+      title: `Бытовая техника`,
+      chapters: [
+        {
+          name: `Микроволновки`,
+          checked: true,
+        },
+        {
+          name: `Холодильники`,
+          checked: false,
+        },
+        {
+          name: `Посудомоечные машины`,
+          checked: false,
+        },
+        {
+          name: `Чайники`,
+          checked: false,
+        }
+      ],
+      active: true,
+    },
+    {
+      title: `Мобильная техника`,
+      chapters: [
+        {
+          name: `Телефоны`,
+          checked: false,
+        },
+        {
+          name: `Планшеты`,
+          checked: false,
+        },
+        {
+          name: `Часы`,
+          checked: false,
+        }
+      ],
+      active: false,
+    },
+    {
+      title: `Компьютеры`,
+      chapters: [
+        {
+          name: `Ноутбуки`,
+          checked: false,
+        },
+        {
+          name: `ПК`,
+          checked: false,
+        },
+        {
+          name: `Моноблоки`,
+          checked: false,
+        },
+        {
+          name: `Комплектующие`,
+          checked: false,
+        }
+      ],
+      active: false,
+    },
+    {
+      title: `Одежда`,
+      chapters: [
+        {
+          name: `Мужская`,
+          checked: false,
+        },
+        {
+          name: `Женская`,
+          checked: false,
+        },
+        {
+          name: `Детская`,
+          checked: false,
+        },
+        {
+          name: `Рваная`,
+          checked: false,
+        },
+        {
+          name: `Грязная`,
+          checked: false,
+        },
+        {
+          name: `Отечественная`,
+          checked: false,
+        },
+        {
+          name: `Лухари`,
+          checked: false,
+        }
+      ],
+      active: false,
+    },
+    {
+      title: `Недвижимость`,
+      chapters: [
+        {
+          name: `Гаражи`,
+          checked: false,
+        }
+      ],
+      active: false,
+    }
+  ];
+
+section(class="catalog")
+  h2(class="catalog__title visually-hidden").
+    Продукция нашей компании
+  ul(class="catalog__path-list")
+    li(class="catalog__path-item").
+      Главная
+    li(class="catalog__path-item catalog__path-item--catalog").
+      Каталог
+    li(class="catalog__path-item catalog__path-item--category").
+      Бытовая техника
+  div(class="catalog__left-block")
+    ul(class="catalog__categories-list")
+      each category in categories
+        li(class="catalog__category-wrapper")
+          button(
+            class=`
+              catalog__category
+              ${category.active ? `catalog__category--active` : `` }
+            `
+            type="button"
+            disabled=category.active
+          ).
+            #{category.title}
+          ul(
+            class=`
+              catalog__chapters-list
+              ${category.active ? `catalog__chapters-list--active` : `` }
+            `
+          )
+            each chapter in category.chapters
+              li(class="catalog__chapter-wrapper")
+                button(
+                  class=`
+                    catalog__chapter
+                    ${ chapter.checked ? `catalog__chapter--checked` : ``}
+                  `
+                  type="button"
+                  data-blank-status=!chapter.checked
+                  disabled=chapter.checked
+                ).
+                  #{chapter.name}
+    a(class="catalog__price-link" href="blank.html" id="price-list" data-blank-status).
+      Прайс-лист
+  div(class="catalog__center-block")
+    ul(class="catalog__products")
+      each val in new Array(5).fill().map((i, index) => index + 1)
+        li(class="catalog__product-wrapper")
+          include product.pug
+    ul(class="catalog__pagination")
+      - const activePage = 3;
+      each val in new Array(7).fill().map((i, index) => index + 1)
+        li(class="catalog__page-wrapper")
+          button(
+            class=`
+              catalog__page
+              ${val === activePage ? `catalog__page--active` : ``}
+            `
+            type="button"
+            aria-label=`Переключить на страницу ${val}`
+            data-blank-status = val !== activePage
+            disabled= val === activePage
+          ).
+            #{val}

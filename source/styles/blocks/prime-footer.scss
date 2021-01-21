@@ -60,6 +60,27 @@
   letter-spacing: 0.02em;
 }
 
-.prime-footer__developers-name {
-  border-bottom: 1px solid $color-white;
+.prime-footer__developers-link {
+  text-decoration: underline;
+
+  outline: none;
+}
+
+.prime-footer__developers-link[href] {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
