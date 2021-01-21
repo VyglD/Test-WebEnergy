@@ -72,6 +72,7 @@
 
 .catalog__category {
   display: block;
+  width: 100%;
   padding: 0;
 
   color: $color-text;
@@ -118,17 +119,24 @@
 }
 
 .catalog__chapters-list {
-  display: none;
+  display: block;
+  height: 0;
+
+  overflow: hidden;
+  visibility: hidden;
 
   &--active {
-    display: block;
+    height: auto;
     margin: -5px 0 2px 9px;
+
+    visibility: visible;
   }
 }
 
 .catalog__chapter {
   display: flex;
   align-items: center;
+  width: 100%;
   padding: 0;
 
   letter-spacing: 0.06em;
