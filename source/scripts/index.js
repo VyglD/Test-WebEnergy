@@ -1,5 +1,6 @@
 import {init as initBlank} from "./mobules/blank";
 import {init as initFeedback} from "./mobules/feedback";
+import {init as initSlider} from "./mobules/slider";
 import {setAbilitySpaceAction} from "./mobules/utils";
 
 document.querySelectorAll(`a`).forEach((node) => {
@@ -8,3 +9,4 @@ document.querySelectorAll(`a`).forEach((node) => {
 
 initBlank();
 initFeedback();
+initSlider();

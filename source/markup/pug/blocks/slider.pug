@@ -1,0 +1,17 @@
+mixin slide(imgName)
+  picture(class="slider__slide-wrapper")
+    source(type="image/webp" srcset=`img/${imgName}.webp`)
+    img(
+      class="slider__img"
+      src=`img/${imgName}.png`
+      alt="Слайд 2"
+      width="1248"
+      height="400"
+    )
+
+section(class="slider")
+  h2(class="slider__title visually-hidden").
+    Галерея изображений
+  div(class="slider__content")
+    +slide("slide-1")
+    +slide("slide-2")

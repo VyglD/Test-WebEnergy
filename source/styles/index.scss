@@ -1,4 +1,6 @@
 // External styles
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
 @import "../../node_modules/toastr/toastr.scss";
 
 // Own styles
@@ -11,3 +13,4 @@
 @import "blocks/feedback.scss";
 @import "blocks/prime-footer.scss";
 @import "blocks/blank.scss";
+@import "blocks/slider.scss";

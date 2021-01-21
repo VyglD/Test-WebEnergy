@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  min-height: 230px;
   max-width: $desktop;
   margin: 0 auto;
   padding: 36px $prime-offset;
@@ -28,6 +29,10 @@
   max-height: 100%;
   width: auto;
   max-width: 100%;
+}
+
+.prime-header__feedback-wrapper {
+  margin-left: auto;
 }
 
 .prime-header__phone {
