@@ -52,10 +52,11 @@
     "scripts": {
         "editorconfig": "editorconfig-cli",
         "stylelint": "stylelint \"source/styles/**/*.{css,scss}\" --aei",
+        "eslint": "eslint source/scripts/**/*.js",
         "start": "gulp start",
         "build": "gulp build --production",
         "dev": "gulp build",
-        "test": "gulp test && npm run stylelint && npm run editorconfig"
+        "test": "gulp test && npm run eslint && npm run stylelint && npm run editorconfig"
     },
     "pre-commit": [
         "test"

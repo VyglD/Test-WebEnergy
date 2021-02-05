@@ -49,15 +49,16 @@
   outline: none;
 }
 
-.prime-header__phone:hover,
-.prime-header__phone:focus {
-  color: $color-white;
-}
+.prime-header__phone:not(:disabled) {
+  &:hover,
+  &:focus {
+    color: $color-white;
+  }
 
-.prime-header__phone:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
-
 
 .prime-header__feedback-button {
   display: block;
@@ -78,15 +79,17 @@
   outline: none;
 }
 
-.prime-header__feedback-button:hover,
-.prime-header__feedback-button:focus {
-  border-bottom-color: transparent;
-}
+.prime-header__feedback-button:not(:disabled) {
+  &:hover,
+  &:focus {
+    border-bottom-color: transparent;
+  }
 
-.prime-header__feedback-button:hover {
-  opacity: 0.8;
-}
+  &:hover {
+    opacity: 0.8;
+  }
 
-.prime-header__feedback-button:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }

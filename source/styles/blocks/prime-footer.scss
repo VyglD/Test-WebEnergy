@@ -25,17 +25,19 @@
   outline: none;
 }
 
-.prime-footer__email:hover,
-.prime-footer__email:focus {
-  text-decoration: underline;
-}
+.prime-footer__email:not(:disabled) {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 
-.prime-footer__email:hover {
-  opacity: 0.8;
-}
+  &:hover {
+    opacity: 0.8;
+  }
 
-.prime-footer__email:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .prime-footer__developers-wrapper {

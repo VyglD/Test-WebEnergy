@@ -89,26 +89,28 @@ $popup-cross-thickness: 2px;
   }
 }
 
-.popup__close-button:hover,
-.popup__close-button:focus {
-  box-shadow: inset 0 0 0 2px $color-black-2;
+.popup__close-button:not(:disabled) {
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 2px $color-black-2;
 
-  &::before,
-  &::after {
-    background-color: $color-black-2;
-  }
-}
-
-.popup__close-button:hover {
-  &::before {
-    transform: rotate(225deg);
+    &::before,
+    &::after {
+      background-color: $color-black-2;
+    }
   }
 
-  &::after {
-    transform: rotate(135deg);
-  }
-}
+  &:hover {
+    &::before {
+      transform: rotate(225deg);
+    }
 
-.popup__close-button:active {
-  opacity: 0.2;
+    &::after {
+      transform: rotate(135deg);
+    }
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }

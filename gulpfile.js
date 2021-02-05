@@ -3,7 +3,7 @@ const plumber = require(`gulp-plumber`);
 const clean = require(`gulp-clean`);
 const imagemin = require(`gulp-imagemin`);
 const webp = require(`gulp-webp`);
-const webpCss = require(`gulp-webp-css`);
+const webpCSS = require(`gulp-webp-css`);
 const htmlhint = require(`gulp-htmlhint`);
 const htmlValidator = require(`gulp-w3c-html-validator`);
 const htmlmin = require(`gulp-htmlmin`);
@@ -166,7 +166,7 @@ gulp.task(`styles`, () => {
       )
     ]))
     .pipe(rename(`style.min.css`))
-    .pipe(webpCss([`.jpg`, `.jpeg`, `.png`]))
+    .pipe(webpCSS([`.jpg`, `.jpeg`, `.png`]))
     .pipe(
         gulpif(
             !isProd,

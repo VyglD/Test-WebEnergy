@@ -41,16 +41,18 @@
   outline: none;
 }
 
-.blank__link:hover,
-.blank__link:focus {
-  color: $color-red;
-  text-decoration: underline;
-}
+.blank__link:not(:disabled) {
+  &:hover,
+  &:focus {
+    color: $color-red;
+    text-decoration: underline;
+  }
 
-.blank__link:hover {
-  text-decoration: none;
-}
+  &:hover {
+    text-decoration: none;
+  }
 
-.blank__link:active {
-  opacity: 0.2;
+  &:active {
+    opacity: 0.2;
+  }
 }

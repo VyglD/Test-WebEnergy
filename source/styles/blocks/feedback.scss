@@ -110,19 +110,21 @@ $feedback-input-focus-shadow: 0 0 0 2px $color-black-2;
   outline: none;
 }
 
-.feedback__submit:hover,
-.feedback__submit:focus {
-  color: $color-black-2;
+.feedback__submit:not(:disabled) {
+  &:hover,
+  &:focus {
+    color: $color-black-2;
 
-  box-shadow:
-    inset 0 0 0 2px $color-black-2,
-    0 0 4px 1px $color-black-2;
-}
+    box-shadow:
+      inset 0 0 0 2px $color-black-2,
+      0 0 4px 1px $color-black-2;
+  }
 
-.feedback__submit:hover {
-  opacity: 0.8;
-}
+  &:hover {
+    opacity: 0.8;
+  }
 
-.feedback__submit:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }

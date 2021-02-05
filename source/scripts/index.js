@@ -1,8 +1,8 @@
-import {init as initBlank} from "./mobules/blank";
-import {init as initFeedback} from "./mobules/feedback";
-import {init as initSlider} from "./mobules/slider";
-import {init as initCategories} from "./mobules/catalog-categories";
-import {setAbilitySpaceAction} from "./mobules/utils";
+import {init as initBlank} from "./modules/blank";
+import {init as initFeedback} from "./modules/feedback";
+import {init as initSlider} from "./modules/slider";
+import {init as initCategories} from "./modules/catalog-categories";
+import {setAbilitySpaceAction} from "./modules/utils";
 
 document.querySelectorAll(`a`).forEach((node) => {
   setAbilitySpaceAction(node);

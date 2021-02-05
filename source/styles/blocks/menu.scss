@@ -68,8 +68,7 @@
   background-color: transparent;
 }
 
-
-.menu__link[href] {
+.menu__link[href]:not(:disabled) {
   &:hover,
   &:focus {
     &::after {
@@ -123,10 +122,12 @@
     }
   }
 
-  .menu__link[href]:hover,
-  .menu__link[href]:focus {
-    &::after {
-      background-color: transparent;
+  .menu__link[href]:not(:disabled) {
+    &:hover,
+    &:focus {
+      &::after {
+        background-color: transparent;
+      }
     }
   }
 }
